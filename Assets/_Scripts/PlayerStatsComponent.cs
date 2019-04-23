@@ -13,6 +13,9 @@ public class PlayerStatsComponent : MonoBehaviour
     private bool settingIsOpen = false;
     public float health = 100;
     public float score = 0;
+
+    public float minFallDamage = 15;
+    public float fallDamageImpact = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,7 @@ public class PlayerStatsComponent : MonoBehaviour
         settings = GameObject.Find("Settings");
         reticalpoint = GameObject.Find("GvrReticlePointer");
         movement = GetComponent<MovementComponent>();
-        if(GameObject.Find("Trace") != null)
+        if (GameObject.Find("Trace") != null)
             trace = GameObject.Find("Trace").GetComponent<TraceComponent>();
 
         danger.SetActive(false);
@@ -35,11 +38,12 @@ public class PlayerStatsComponent : MonoBehaviour
             {
                 movement.enabled = true;
                 reticalpoint.SetActive(true);
-                if(trace != null)
+                if (trace != null)
                     trace.pinpoint = true;
                 settings.SetActive(false);
 
-            } else
+            }
+            else
             {
                 settings.SetActive(true);
                 reticalpoint.SetActive(false);
@@ -54,15 +58,25 @@ public class PlayerStatsComponent : MonoBehaviour
 
     void Health()
     {
-        if(health < 100)
+        if (health < 100)
         {
             health += 0.01f;
-        } else if (health > 100)
+        }
+        else if (health > 100)
         {
             health = 100;
         }
 
         danger.SetActive(health <= 10);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        float force = other.relativeVelocity.x + other.relativeVelocity.y + other.relativeVelocity.z;
+        if (force > minFallDamage)
+        {
+            health -= (force - minFallDamage) * fallDamageImpact;
+        }
     }
 
     // Update is called once per frame

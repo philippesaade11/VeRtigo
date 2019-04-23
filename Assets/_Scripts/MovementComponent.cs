@@ -36,12 +36,6 @@ public class MovementComponent : MonoBehaviour
         runAudio = transform.Find("Run Audio").GetComponent<AudioSource>();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "TravelRock")
-            rigidbody.transform.parent = other.transform;
-    }
-
     void Walk()
     {
         float h = Input.GetAxis("Horizontal");
@@ -55,15 +49,17 @@ public class MovementComponent : MonoBehaviour
             transform.Translate(Vector3.forward * v * runspeed);
             transform.Translate(Vector3.right * h * runspeed);
         }
-        else if(isWalking) {
+        else if (isWalking)
+        {
             transform.Translate(Vector3.forward * v * walkspeed);
             transform.Translate(Vector3.right * h * walkspeed);
         }
-        
+
         if (!isNotJumping)
         {
             Animation(false, false);
-        } else
+        }
+        else
         {
             Animation(isWalking, isRunning);
         }
@@ -72,13 +68,13 @@ public class MovementComponent : MonoBehaviour
     void Jump()
     {
         isNotJumping = Physics.Raycast(transform.position, Vector3.down, 2f, terrainLayers);
-        if(isNotJumping && (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.JoystickButton0)))
+        if (isNotJumping && (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.JoystickButton0)))
         {
             Animation(false, false);
             rigidbody.AddForce(new Vector3(0, jumpF, 0), ForceMode.VelocityChange);
         }
     }
-    
+
     public void Animation(bool isWalking, bool isRunning)
     {
         Head_Anim.SetBool("isWalking", isWalking);
@@ -86,16 +82,21 @@ public class MovementComponent : MonoBehaviour
         Sword_Anim.SetBool("isWalking", isWalking);
         Sword_Anim.SetBool("isRunning", isRunning);
 
-        if (!isWalking) {
+        if (!isWalking)
+        {
             walkAudio.Stop();
         }
-        else if(!walkAudio.isPlaying) {
+        else if (!walkAudio.isPlaying)
+        {
             walkAudio.Play();
         }
 
-        if (!isRunning) {
+        if (!isRunning)
+        {
             runAudio.Stop();
-        } else if(!runAudio.isPlaying) {
+        }
+        else if (!runAudio.isPlaying)
+        {
             runAudio.Play();
         }
     }
@@ -107,11 +108,12 @@ public class MovementComponent : MonoBehaviour
             HitTime = 0;
         }
         HitTime += 1;
-        if(!isHitting && HitTime < 25)
+        if (!isHitting && HitTime < 25)
         {
             isHitting = true;
             Sword_Anim.SetBool("isHitting", true);
-        } else if(isHitting && HitTime >= 25)
+        }
+        else if (isHitting && HitTime >= 25)
         {
             isHitting = false;
             Sword_Anim.SetBool("isHitting", false);
@@ -126,6 +128,24 @@ public class MovementComponent : MonoBehaviour
         cam_Trans.Rotate(new Vector3(-v, 0, 0));
     }
 
+    IEnumerator GrabSword()
+    {
+        Transform target = transform.Find("Body").Find("Sword");
+        float positionStep = 0.1f;
+        float rotationStep = 1f;
+
+        GameObject sword = GameObject.Find("Sword Object");
+        while (Quaternion.Angle(sword.transform.rotation, target.rotation) > rotationStep || Vector3.Distance(sword.transform.position, target.position) > positionStep)
+        {
+            sword.transform.rotation = Quaternion.RotateTowards(sword.transform.rotation, target.rotation, rotationStep);
+            sword.transform.position = Vector3.MoveTowards(sword.transform.position, target.position, positionStep);
+            yield return new WaitForSeconds(0.01f);
+        }
+        Destroy(sword);
+        target.gameObject.SetActive(true);
+        yield return null;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -136,6 +156,10 @@ public class MovementComponent : MonoBehaviour
         }
         Attack();
         Turn();
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            StartCoroutine("GrabSword");
+        }
 
         //foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
         //{
