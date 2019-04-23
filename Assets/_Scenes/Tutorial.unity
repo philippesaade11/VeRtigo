@@ -6045,6 +6045,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4301127749281650788, guid: 105cc5c21303bc14bb363a87c088b0b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105cc5c21303bc14bb363a87c088b0b6, type: 3}
 --- !u!4 &1250326544 stripped
@@ -9958,17 +9963,17 @@ PrefabInstance:
     - target: {fileID: 9178752924331914667, guid: aa3ecfd8c1957004e9656d75bfad3160,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -341.1
+      value: -342.51
       objectReference: {fileID: 0}
     - target: {fileID: 9178752924331914667, guid: aa3ecfd8c1957004e9656d75bfad3160,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -52.55
+      value: -51.96
       objectReference: {fileID: 0}
     - target: {fileID: 9178752924331914667, guid: aa3ecfd8c1957004e9656d75bfad3160,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -531.6
+      value: -518.41
       objectReference: {fileID: 0}
     - target: {fileID: 9178752924331914667, guid: aa3ecfd8c1957004e9656d75bfad3160,
         type: 3}
@@ -10008,6 +10013,26 @@ PrefabInstance:
     - target: {fileID: 9178752924331914667, guid: aa3ecfd8c1957004e9656d75bfad3160,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618386400228022135, guid: aa3ecfd8c1957004e9656d75bfad3160,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.543
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618386400228022135, guid: aa3ecfd8c1957004e9656d75bfad3160,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618386400228022135, guid: aa3ecfd8c1957004e9656d75bfad3160,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000405437807769437, guid: aa3ecfd8c1957004e9656d75bfad3160,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

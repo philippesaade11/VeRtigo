@@ -63,7 +63,7 @@
     <Compile Include="Assets\_Scripts\BodyComponent.cs" />
     <Compile Include="Assets\_Scripts\ChangeTextColorComponent.cs" />
     <Compile Include="Assets\_Scripts\CrawlMonsterComponent.cs" />
-    <Compile Include="Assets\_Scripts\FixVRSetComponent.cs" />
+    <Compile Include="Assets\_Scripts\EnemyAIComponent.cs" />
     <Compile Include="Assets\_Scripts\MainCanvasScript.cs" />
     <Compile Include="Assets\_Scripts\MovementComponent.cs" />
     <Compile Include="Assets\_Scripts\NewGameController.cs" />
@@ -165,6 +165,10 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
     <None Include="Assets\Rocks and Boulders 2\Shaders\shader info.txt" />
     <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />

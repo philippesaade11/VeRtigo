@@ -6,16 +6,17 @@ using UnityEngine;
 
 public class SettingsComponent : MonoBehaviour
 {
-    public Button snap_btn, map_btn, savequite_btn;
+    public Button resume_btn, map_btn, savequite_btn;
     // Start is called before the first frame update
     void Start()
     {
         map_btn.onClick.AddListener(gotomap);
+        resume_btn.onClick.AddListener(gotomap);
     }
 
     void OnEnable()
     {
-        snap_btn.Select();
+        resume_btn.Select();
         foreach (Transform child in transform)
         {
             if(child.gameObject.name != "Pause")

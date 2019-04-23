@@ -124,15 +124,14 @@ public class MovementComponent : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal2");
         float v = Input.GetAxis("Vertical2");
-        transform.Rotate(new Vector3(0, h, 0));
-        cam_Trans.Rotate(new Vector3(-v, 0, 0));
+        transform.Rotate(new Vector3(-v, h, 0));
     }
 
     IEnumerator GrabSword()
     {
         Transform target = transform.Find("Body").Find("Sword");
         float positionStep = 0.1f;
-        float rotationStep = 1f;
+        float rotationStep = 5f;
 
         GameObject sword = GameObject.Find("Sword Object");
         while (Quaternion.Angle(sword.transform.rotation, target.rotation) > rotationStep || Vector3.Distance(sword.transform.position, target.position) > positionStep)
