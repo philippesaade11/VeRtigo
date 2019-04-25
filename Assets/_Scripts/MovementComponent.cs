@@ -13,11 +13,11 @@ public class MovementComponent : MonoBehaviour
     private AudioSource runAudio;
     private LayerMask terrainLayers;
 
-    private bool isWalking = false;
-    private bool isRunning = false;
-    private bool isNotJumping = true;
-    private bool isHitting = true;
-    private int HitTime = 25;
+    public bool isWalking = false;
+    public bool isRunning = false;
+    public bool isNotJumping = true;
+    public bool isHitting = true;
+    public int HitTime = 25;
 
     public float jumpF = 1f;
     public float walkspeed = 0.075f;

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class TutorialComponent : MonoBehaviour
 {
+    MovementComponent player;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("Tutorial");
+        player = GameObject.Find("Player").GetComponent<MovementComponent>();
     }
 
     IEnumerator Tutorial()
@@ -24,28 +26,48 @@ public class TutorialComponent : MonoBehaviour
         transform.Find("3").gameObject.SetActive(false);
         transform.Find("4").gameObject.SetActive(true);
         yield return new WaitForSeconds(6);
-        transform.Find("4").gameObject.SetActive(false);
-        transform.Find("5").gameObject.SetActive(true);
+        //Detect Gyroscope
         yield return new WaitForSeconds(1);
-        transform.Find("5").gameObject.SetActive(false);
-        transform.Find("6").gameObject.SetActive(true);
+        //----------------
+        transform.Find("4").gameObject.SetActive(false);
+        transform.Find("goodwork").gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        transform.Find("goodwork").gameObject.SetActive(false);
+
+        transform.Find("5").gameObject.SetActive(true);
         yield return new WaitForSeconds(6);
+        while(!player.isRunning)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+        transform.Find("5").gameObject.SetActive(false);
+        transform.Find("goodwork").gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        transform.Find("goodwork").gameObject.SetActive(false);
+
+        transform.Find("6").gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        while (player.isNotJumping)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
         transform.Find("6").gameObject.SetActive(false);
+        transform.Find("goodwork").gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        transform.Find("goodwork").gameObject.SetActive(false);
+
         transform.Find("7").gameObject.SetActive(true);
         yield return new WaitForSeconds(3);
         transform.Find("7").gameObject.SetActive(false);
         transform.Find("8").gameObject.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         transform.Find("8").gameObject.SetActive(false);
         transform.Find("9").gameObject.SetActive(true);
-        yield return new WaitForSeconds(6);
-        transform.Find("9").gameObject.SetActive(false);
-        transform.Find("10").gameObject.SetActive(true);
         yield return new WaitForSeconds(4);
-        transform.Find("10").gameObject.SetActive(false);
-        transform.Find("11").gameObject.SetActive(true);
+        transform.Find("9").gameObject.SetActive(false);
+        transform.Find("bestofluck").gameObject.SetActive(true);
         yield return new WaitForSeconds(2);
-        transform.Find("11").gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

@@ -904,7 +904,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -3976,12 +3976,12 @@ RectTransform:
   - {fileID: 139020750}
   - {fileID: 1375717365}
   - {fileID: 1827577945}
-  - {fileID: 2084043108}
   - {fileID: 951915543}
   - {fileID: 925638247}
   - {fileID: 1602107173}
   - {fileID: 1627844058}
   - {fileID: 1982059250}
+  - {fileID: 2084043108}
   - {fileID: 1874471876}
   m_Father: {fileID: 5374432790469664760}
   m_RootOrder: 0
@@ -5334,7 +5334,7 @@ GameObject:
   - component: {fileID: 925638248}
   - component: {fileID: 925638250}
   m_Layer: 5
-  m_Name: 7
+  m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5352,7 +5352,7 @@ RectTransform:
   m_LocalScale: {x: 0.33333442, y: 0.7499997, z: 0.75}
   m_Children: []
   m_Father: {fileID: 751217495}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5381,7 +5381,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -5573,7 +5573,7 @@ GameObject:
   - component: {fileID: 951915544}
   - component: {fileID: 951915546}
   m_Layer: 5
-  m_Name: 6
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5591,7 +5591,7 @@ RectTransform:
   m_LocalScale: {x: 0.33333442, y: 0.7499997, z: 0.75}
   m_Children: []
   m_Father: {fileID: 751217495}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5620,7 +5620,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -7009,10 +7009,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -7736,7 +7736,7 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -8673,7 +8673,7 @@ GameObject:
   - component: {fileID: 1602107174}
   - component: {fileID: 1602107176}
   m_Layer: 5
-  m_Name: 8
+  m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8691,7 +8691,7 @@ RectTransform:
   m_LocalScale: {x: 0.33333442, y: 0.7499997, z: 0.75}
   m_Children: []
   m_Father: {fileID: 751217495}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8720,7 +8720,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -9046,7 +9046,7 @@ GameObject:
   - component: {fileID: 1627844059}
   - component: {fileID: 1627844061}
   m_Layer: 5
-  m_Name: 9
+  m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9064,7 +9064,7 @@ RectTransform:
   m_LocalScale: {x: 0.33333442, y: 0.7499997, z: 0.75}
   m_Children: []
   m_Father: {fileID: 751217495}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9093,7 +9093,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -10642,7 +10642,7 @@ GameObject:
   - component: {fileID: 1874471878}
   - component: {fileID: 1874471877}
   m_Layer: 5
-  m_Name: 11
+  m_Name: bestofluck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10785,7 +10785,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -11027,7 +11027,7 @@ GameObject:
   - component: {fileID: 1982059251}
   - component: {fileID: 1982059253}
   m_Layer: 5
-  m_Name: 10
+  m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11045,7 +11045,7 @@ RectTransform:
   m_LocalScale: {x: 0.33333442, y: 0.7499997, z: 0.75}
   m_Children: []
   m_Father: {fileID: 751217495}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11074,7 +11074,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -11747,7 +11747,7 @@ GameObject:
   - component: {fileID: 2084043109}
   - component: {fileID: 2084043111}
   m_Layer: 5
-  m_Name: 5
+  m_Name: goodwork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11765,7 +11765,7 @@ RectTransform:
   m_LocalScale: {x: 0.33333442, y: 0.7499997, z: 0.75}
   m_Children: []
   m_Father: {fileID: 751217495}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11794,11 +11794,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
