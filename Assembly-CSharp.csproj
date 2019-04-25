@@ -72,6 +72,7 @@
     <Compile Include="Assets\_Scripts\SettingsComponent.cs" />
     <Compile Include="Assets\_Scripts\SwordComponent.cs" />
     <Compile Include="Assets\_Scripts\TraceComponent.cs" />
+    <Compile Include="Assets\_Scripts\TutorialComponent.cs" />
     <Compile Include="Assets\_Scripts\VoidTriggerComponent.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Hello6DoFControllers\Scripts\DemoObjectController6DoF.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBeta.cs" />
@@ -177,6 +178,7 @@
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
     <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-6DOF.xml" />
+    <None Include="Assets\Hawking_Audio\Stephen Text.txt" />
     <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrControllerReticle.shader" />
